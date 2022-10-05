@@ -1,7 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView
 
-from mydiaryproject.diary.forms import DiaryForm
+from diary.forms import DiaryForm
 
 
 class IndexView(TemplateView):
@@ -14,5 +14,5 @@ class DiaryCreateView(CreateView):
     success_url = reverse_lazy('diary:diary_create_complete')
 
 
-# class DiaryCreateCompleteView(TemplateView):
-#     template_name = 'diary_create_complete.html'
+class DiaryCreateCompleteView(TemplateView):
+    template_name = 'diary_create_complete.html'
